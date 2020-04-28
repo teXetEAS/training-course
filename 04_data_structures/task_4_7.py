@@ -8,6 +8,8 @@
 
 mac = 'AAAA:BBBB:CCCC'
 
+mac = "AAAA"
+mac = int(mac, 16)
 mac = bin(mac)
 print(mac)
 
