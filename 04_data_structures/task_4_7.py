@@ -8,9 +8,6 @@
 
 mac = 'AAAA:BBBB:CCCC'
 
-mac = "AAAA"
-mac = int(mac, 16)
-mac = bin(mac)
+mac = mac.replace(":", "", 2)
+mac = "{:b}".format(int(mac, 16))
 print(mac)
-
-#незакончен

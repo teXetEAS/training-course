@@ -14,9 +14,14 @@
 '''
 
 ip = '192.168.3.1'
-ip = ip.replace(".", " ", 3)
-ip = int(ip)
-ip2 = "{:b} {:b} {:b} {:b}".format(ip)
-print(ip)
+ip = int(ip.replace(".", " ", 3))
+
+
+#ip10 = "{0:<10} {1:<10} {2:<10} {3:<10}".format(ip)
+ip2 = "{0:010b} {1:010b} {2:010b} {3:010b}".format(192, 100, 1, 1)
+
+print(ip2)
+#print(ip10)
+print(type(ip))
 
 #недаделано
