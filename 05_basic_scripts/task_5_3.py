@@ -62,3 +62,6 @@ elif user_intf_mod == "trunk":
     print("\n".join(trunk_template).format(user_vlan))
 else:
     print("ERROR")
+
+
+    print(london_co.get(inputParam, "Такого параметра нет"))

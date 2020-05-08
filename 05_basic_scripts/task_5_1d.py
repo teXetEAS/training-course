@@ -41,7 +41,6 @@ london_co = {
 
 inputDev = input("Укажите устройство: ")
 inputParam = input("Укажите параметр: ")
-#london_co = london_co[inputDev]
 
 print(london_co[inputDev][inputParam.lower()])
 

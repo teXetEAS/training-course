@@ -19,3 +19,21 @@ trunk_template = [
     'switchport trunk encapsulation dot1q', 'switchport mode trunk',
     'switchport trunk allowed vlan {}'
 ]
+
+user_intf_mod = input("Укажите режим интерфейса (access/trunk): ")
+user_intf_type = input("Укажите номер интерфейса: ")
+
+if user_intf_mod == "access":
+    user_vlan = input("Укажите номер VLAN: ")
+    print("-" * 30 + "\nInterface: " + user_intf_type)
+    print("\n".join(access_template).format(user_vlan))
+elif user_intf_mod == "trunk":
+    user_vlan = input("Укажите разрешенные VELANs: ")
+    print("-" * 30 + "\nInterface: " + user_intf_type)
+    print("\n".join(trunk_template).format(user_vlan))
+else:
+    print("ERROR")
+
+#ахуенный и пиздатый говнокод ебаный
+
+

@@ -14,10 +14,20 @@ Mask:
 Ограничение: Все задания надо выполнять используя только пройденные темы.
 '''
 
-input_user = input("Укажите Ip-сети в формате 10.1.1.1/24: ")
+#input_user = input("Укажите Ip-сети в формате 10.1.1.1/24: ")
+input_user = "10.1.1.1/24"
 
 input_user = input_user.replace("/", ".")
 ip = input_user.split(".")
+
+bin_ip = []
+for i in [0, 1, 2, 3, 4]:
+    bin_ip.append("{:08b}".format(int(ip[i])))
+
+
+print(bin_ip)
+
+"""""
 ip[0] = int(ip[0])
 ip[1] = int(ip[1])
 ip[2] = int(ip[2])
@@ -30,3 +40,4 @@ ip2 = "\n{:<08b} {:<08b} {:<08b} {:<08b}".format(ip[0], ip[1], ip[2], ip[3])
 print(ip10, ip2)
 
 #а вот дальше не понянятно нихуя как делать
+"""
