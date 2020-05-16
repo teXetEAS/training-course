@@ -8,8 +8,6 @@
 
 nat = 'ip nat inside source list ACL interface FastEthernet0/1 overload'
 
-oldString = "FastEthernet"
-newString = "GigabitEthernet"
-
-nat = nat.replace(oldString, newString)
-print(nat)
+natRes = nat.split()
+resalt = nat.replace(natRes[-2], "FastEthernet0/1")
+print(resalt)

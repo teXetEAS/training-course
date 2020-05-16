@@ -10,16 +10,11 @@
 command1 = 'switchport trunk allowed vlan 1,2,3,5,8'
 command2 = 'switchport trunk allowed vlan 1,3,8,9'
 
-com1One = command1.find("1")
-com2One = command2.find("1")
-command1 = command1[com1One : ]
-command2 = command2[com2One : ]
+com1 = command1.split()
+resCom1 = set(com1[-1].split(","))
 
-com1 = command1.split(",")
-com2 = command2.split(",")
+com2 = command2.split()
+resCom2 = set(com2[-1].split(","))
 
-com1 = set(com1)
-com2 = set(com2)
-res = com1 & com2
-res = sorted(res)
-print(res)
+resalt = sorted(resCom1 & resCom2)
+print(resalt)
