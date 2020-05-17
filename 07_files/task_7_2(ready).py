@@ -8,8 +8,8 @@
 Между строками не должно быть дополнительного символа перевода строки.
 Ограничение: Все задания надо выполнять используя только пройденные темы.
 '''
-
 with open("config_sw1.txt") as file:
-    for f in file:
-        if "!" in f:
-            print(f)
+    for string in file:
+        string = string.strip()
+        if not string.startswith("!"):
+            print(string)

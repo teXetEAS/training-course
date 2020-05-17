@@ -14,9 +14,35 @@ Outbound Interface:    FastEthernet0/0
 
 conf = ["Protocol:", "Prefix:", "AD/Metric:", "хуйня:", "Next-Hop:", "Last update:", "Outbound Interface:"]
 
-with open("ospf.txt") as f:
-    for c in conf:
-        for i in f:
-            i = i.split()
+with open("ospf.txt") as fale:
+    for param in fale:
+        params = param.replace("[", "").replace("]", "").split()
+        for vel in params:
+            pass
+
+result = ["{:<20} {}\n ".format(key, value)for key, value in zip(keys, ospf_route)]
+
+
+
+
+
+
+
+
+'''
+    for param in fale:
+        params = param.replace("[", "").replace("]", "").split()
+        for key in conf:
+            print("*" * 50)
+            for vel in params:
+                    res = "{}{}".format(key, vel)
+                    print(res)
+
+           
+            for key in conf:
+                res = "{}{}".format(key, vel)
+                print(res)
+'''
+
 
 #я хз кароч

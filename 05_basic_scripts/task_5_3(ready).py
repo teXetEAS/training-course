@@ -49,19 +49,12 @@ trunk_template = [
     'switchport trunk allowed vlan {}'
 ]
 
+modList = dict(access_template = access_template, trunk_template = trunk_template)#обьединение двух листов в словарь
 
-user_intf_mod = input("Укажите режим интерфейса (access/trunk): ")
+user_intf_mod = input("Укажите режим интерфейса (access/trunk): ")#ввод данных пользователем
 user_intf_type = input("Укажите номер интерфейса: ")
 user_vlan = input("Укажите номер VLAN(s): ")
 
-print("-"*30, "\nInterface {}".format(user_intf_type))
-
-if user_intf_mod == "access":
-    print("\n".join(access_template).format(user_vlan))
-elif user_intf_mod == "trunk":
-    print("\n".join(trunk_template).format(user_vlan))
-else:
-    print("ERROR")
-
-
-    print(london_co.get(inputParam, "Такого параметра нет"))
+print("-"*30, "\nInterface {}".format(user_intf_type))#вывод интерфейса
+inputMod = "{}_{}".format(user_intf_mod, "template")#форматирование "режима интерфейса"
+print("\n".join(modList[inputMod]).format(user_vlan))#вывод результата в зависимости от выбора режима интерфейса

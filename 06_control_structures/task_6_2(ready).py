@@ -11,10 +11,9 @@
    'unused' - во всех остальных случаях
 Ограничение: Все задания надо выполнять используя только пройденные темы.
 '''
-user_ip_input = "256.1.1.1"
-#user_ip_input = input("enter ip: ")
 
-#ip_input = user_ip_input.split(".")
+user_ip_input = input("enter ip: ")
+
 ip = []
 for i in user_ip_input.split("."):
     ip.append(int(i))

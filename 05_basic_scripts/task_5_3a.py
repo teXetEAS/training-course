@@ -19,21 +19,23 @@ trunk_template = [
     'switchport trunk encapsulation dot1q', 'switchport mode trunk',
     'switchport trunk allowed vlan {}'
 ]
+'''
+modList = dict(access_template = access_template, trunk_template = trunk_template)
 
 user_intf_mod = input("Укажите режим интерфейса (access/trunk): ")
 user_intf_type = input("Укажите номер интерфейса: ")
 
-if user_intf_mod == "access":
-    user_vlan = input("Укажите номер VLAN: ")
-    print("-" * 30 + "\nInterface: " + user_intf_type)
-    print("\n".join(access_template).format(user_vlan))
-elif user_intf_mod == "trunk":
-    user_vlan = input("Укажите разрешенные VELANs: ")
-    print("-" * 30 + "\nInterface: " + user_intf_type)
-    print("\n".join(trunk_template).format(user_vlan))
-else:
-    print("ERROR")
+inputMod = "{}_{}".format(user_intf_mod, "template")
+reqestVlan = 
 
-#ахуенный и пиздатый говнокод ебаный
+inputAccess = input("Укажите номер VLAN: ")
+inputTrunk = input("Укажите разрешенные VLAN(s): ")
 
+print("-"*30, "\nInterface {}".format(user_intf_type))
+
+print("\n".join(modList[inputMod]).format(user_vlan))
+
+print(london_co.get(inputParam, "Такого параметра нет"))
+
+'''
 

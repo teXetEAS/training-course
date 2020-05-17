@@ -10,6 +10,7 @@
 
 mac = ['aabb:cc80:7000', 'aabb:dd80:7340', 'aabb:ee80:7000', 'aabb:ff80:7000']
 
-for i in mac:
-    i = i.replace(":", ".")
-    print(i)
+macCisco = []
+for iMac in mac:
+    macCisco.append(iMac.replace(":", "."))
+print(macCisco)
